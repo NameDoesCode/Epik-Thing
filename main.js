@@ -2,8 +2,7 @@ var Discord = require("discord.js"), ctx = new Discord.Client(), fs = require('f
 String.prototype.json = function() {
  return JSON.parse(fs.readFileSync(this.toString() + '.json').toString());
 				};
-var readline = require('readline');
-var rl = readline.createInterface({"prompt":"Eval>"});
+var readline = require('readline'), process = require("process"), rl = readline.createInterface({input: process.stdin,output: process.stdout, prompt: "Eval>"});
 rl.prompt();
 rl.on("line",(l)=>{
 try{
