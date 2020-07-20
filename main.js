@@ -25,9 +25,9 @@ ctx.on('message', message => {
 	case "exec":
 		if(ta != "") cp.exec(ta, (err, stdo, stde) => {
 			var embd = new Discord.RichEmbed()
-			if(stdo != undefined) embd.addField("STDOUT",stdo)
-			if(stde != undefined) embd.addField("STDERR",stde)
-			if(err != undefined) embd.addField("Error", err)
+			if(stdo != "") embd.addField("STDOUT",stdo)
+			if(stde != "") embd.addField("STDERR",stde)
+			if(err != "") embd.addField("Error", err)
 			message.channel.send(embd)
 			})
 			else message.channel.send("No command specified.")
