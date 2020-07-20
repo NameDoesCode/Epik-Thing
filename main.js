@@ -2,6 +2,7 @@ var Discord = require("discord.js"), ctx = new Discord.Client(), fs = require('f
 String.prototype.json = function() {
  return JSON.parse(fs.readFileSync(this.toString() + '.json').toString());
 				};
+				
 var readline = require('readline'), process = require("process"), rl = readline.createInterface({input: process.stdin,output: process.stdout, prompt: "Eval>"});
 rl.prompt();
 rl.on("line",(l)=>{
@@ -9,30 +10,43 @@ try{
 console.log(eval(l));
 }catch(err){ console.log(err.toString())};
 });
+
 ctx.on('message', message => {
-	var arg = message.content.split(' '), cmd = arg[0].toLowerCase();
-	if(cmd == "~stop"&&message.author.id=="450026451115311125") {
+	var arg = message.content.split(' '), cmd = arg[0].toLowerCase(),ta = message.content.replace(arg[0]+" ","")
+	if("./Arrays/owners".json().hasOwnProperty(message.author.id)) 
+	switch(cmd.replace("~","")){
+	case "stop":
 		if(botses != undefined){
 			message.channel.send("Destroying the client.").then((m)=>{em=m});
 			botses.kill("SIGINT");
 			botses = undefined;
 		}else message.channel.send("The session is already down.");
-		}
-	if(cmd == "~start"&&message.author.id=="450026451115311125") {
+		break
+	case "exec":
+		if(ta != "") cp.exec(ta, (err, stdo, stde) => {
+			var embd = new Discord.RichEmbed()
+			if(stdo != undefined) embd.addField("STDOUT",stdo)
+			if(stde != undefined) embd.addField("STDERR",stde)
+			if(err != undefined) embd.addField("Error", err)
+			message.channel.send(embd)
+			})
+			else message.channel.send("No command specified.")
+		break
+	case "start":
 		if(botses == undefined){
 			init();
 			message.channel.send("Connecting the client.");
 		}else message.channel.send("The session is already up.");
-		}
-	if(cmd == "~reload"&&message.author.id=="450026451115311125") {
+		break
+ case "reload":
 		var em = undefined;
 		message.channel.send("Destroying the client.").then((m)=>{em=m});
 			botses.kill("SIGINT");
 			botses = undefined;
 			init();
 			message.channel.send("Connecting the client.");
-}
-	
+			break
+	}
 		})
 function init() {
 			botses = cp.fork('./bot.js');
