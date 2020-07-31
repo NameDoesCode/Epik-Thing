@@ -1,10 +1,10 @@
 var i = true
 if(message.mentions.members.first().highestRole.position <= message.member.highestRole.positon) {
-	message.chanel.send("They're your superior silly.")
+	message.channel.send("They're your superior silly.")
 	i = false
 	}
 if(i && message.mentions.members.first().highestRole.position <= message.guild.me.highestRole.position) {
-	message.chanel.send(`*Try giving Sentire a role that's above **${message.mentions.members.first().highestRole.name}** and try again.*`)
+	message.channel.send(`*Try giving Sentire a role that's above **${message.mentions.members.first().highestRole.name}** and try again.*`)
 	i = false
 	}
 if(i) message.mentions.members.first().setNickname(message.content.replace(arg[0] + " ","").replace(message.mentions.users.first(),"")).then((user)=>{
