@@ -8,7 +8,6 @@
   "help":{"toggled":true,"path":"Tools/help.js","cd":10000},
   "user":{"toggled":true,"path":"Tools/user.js","cd":15000},
   "fuck":{"toggled":true,"path":"Responses/fuck.js","cd":15000,"antiTrigger":["nsfw","nps","npb","ping"],"uhp":["ADD_REACTIONS","SEND_MESSAGES"]}, 
-  "finger":{"toggled":true,"path":"Responses/finger.js","cd":15000,"antiTrigger":["nsfw","nps","npb","ping"],"uhp":["ADD_REACTIONS","SEND_MESSAGES"]},
-  "autoslap":{"toggled":true,"path":"Responses/autoslap.js","cd":15000},
+  "finger":{"toggled":true,"path":"Responses/finger.js","cd":15000,"antiTrigger":["nsfw","nps","npb","ping"],"uhp":["ADD_REACTIONS","SEND_MESSAGES"]}
 }, "aliases": []
 }
