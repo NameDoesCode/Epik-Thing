@@ -1,13 +1,14 @@
 { "raw": {
-  "reddit": {"toggled":true,"path":"Tools/reddit.js","cd":30000},
-  "hug": {"toggled":true,"path":"Responses/hug.js","cd":5000,"antiTrigger":["npb"]},
-  "kiss": {"toggled":true,"path":"Responses/kiss.js","cd":5000,"antiTrigger":["nps","npb","ping"],"uhp":["ADD_REACTIONS","SEND_MESSAGES"]},
-  "eval": {"toggled":true,"path":"Moderation/eval.js"},
+  "reddit":{"toggled":true,"path":"Tools/reddit.js","cd":30000},
+  "hug":{"toggled":true,"path":"Responses/hug.js","cd":5000,"antiTrigger":["npb"]},
+  "kiss":{"toggled":true,"path":"Responses/kiss.js","cd":5000,"antiTrigger":["nps","npb","ping"],"uhp":["ADD_REACTIONS","SEND_MESSAGES"]},
+  "eval":{"toggled":true,"path":"Moderation/eval.js"},
   "dm":{"toggled":true,"path":"Tools/dm.js"},
   "nick":{"toggled":true,"path":"Tools/nick.js","uhp":["MANAGE_NICKNAMES"],"antiTrigger":["ping"]},
   "help":{"toggled":true,"path":"Tools/help.js","cd":60000},
   "user":{"toggled":true,"path":"Tools/user.js","cd":10000},
   "fuck":{"toggled":true,"path":"Responses/fuck.js","cd":17500,"antiTrigger":["nsfw","nps","npb","ping"],"uhp":["ADD_REACTIONS","SEND_MESSAGES"]}, 
-  "finger":{"toggled":true,"path":"Responses/finger.js","cd":17500,"antiTrigger":["nsfw","nps","npb","ping"],"uhp":["ADD_REACTIONS","SEND_MESSAGES"]}
+  "finger":{"toggled":true,"path":"Responses/finger.js","cd":17500,"antiTrigger":["nsfw","nps","npb","ping"],"uhp":["ADD_REACTIONS","SEND_MESSAGES"]},
+  "kick":{"toggled":true,"path":"Moderation/kick.js","uhp":["KICK_MEMBERS"],"antiTrigger":["ping"]}
 }, "aliases": []
 }
