@@ -3,7 +3,7 @@ if(message.mentions.members.first().highestRole.position >= message.member.highe
 	message.chanel.send("They're your superior silly.")
 	i = false
 	}
-if(i && message.mentions.members.first().highestRole.position >= message.guild.me.highestRole.position) {
+if(i && message.mentions.members.first().highestRole.position <= message.guild.me.highestRole.position) {
 	message.chanel.send(`*Try giving Sentire a role that's above **${message.mentions.members.first().highestRole.name}** and try again.*`)
 	i = false
 	}
