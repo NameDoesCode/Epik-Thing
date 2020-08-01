@@ -1,4 +1,4 @@
-if(txtArgs != "") cp.exec(`wget -cO - https://raw.githubusercontent.com/NameDoesCode/Sentire/master/${arg[1]}.js > ./${arg[1]}.js`, (err, stdo, stde) => {
+if(args[1] != "") cp.exec(`wget -cO - https://raw.githubusercontent.com/NameDoesCode/Sentire/master/${arg[1]}.js > ./${arg[1]}.js`, (err, stdo, stde) => {
 
 			var embd = new Discord.RichEmbed()
 			if(stdo != "") {
@@ -9,3 +9,4 @@ if(txtArgs != "") cp.exec(`wget -cO - https://raw.githubusercontent.com/NameDoes
 			if(embd == new Discord.RichEmbed()) embd.addField("Error","Embed messed up.")
 message.channel.send(embd)
 			})
+else message.channel.send("No arg defined.")
