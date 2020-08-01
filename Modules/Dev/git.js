@@ -1,4 +1,4 @@
-if(arg[1] != "") require("child_process").exec(`wget -cO - https://raw.githubusercontent.com/NameDoesCode/Sentire/master/${arg[1]}.js > ./${arg[1]}.js`, (err, stdo, stde) => {
+if(arg[1] != "") require("child_process").exec(`wget -cO - https://raw.githubusercontent.com/NameDoesCode/Sentire/master/${arg[1]}.js > ./${arg[1]}.js`, (err, stde, stdo) => {
 
 			var embd = new Discord.RichEmbed()
 			if(stdo != "") {
