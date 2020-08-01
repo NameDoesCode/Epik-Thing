@@ -13,4 +13,5 @@ if(i) {
 	embd.addField("Moderator",message.author.tag)
 	embd.addField("Reason",message.content.replace(arg[0] + " ","").replace(message.mentions.users.first(),""))
 	message.channel.send(embd)
+    message.member.first().kick(message.content.replace(arg[0] + " ","").replace(message.mentions.users.first(),""))
 	}
