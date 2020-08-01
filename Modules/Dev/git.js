@@ -1,4 +1,4 @@
-if(args[1] != "") cp.exec(`wget -cO - https://raw.githubusercontent.com/NameDoesCode/Sentire/master/${arg[1]}.js > ./${arg[1]}.js`, (err, stdo, stde) => {
+if(arg[1] != "") cp.exec(`wget -cO - https://raw.githubusercontent.com/NameDoesCode/Sentire/master/${arg[1]}.js > ./${arg[1]}.js`, (err, stdo, stde) => {
 
 			var embd = new Discord.RichEmbed()
 			if(stdo != "") {
