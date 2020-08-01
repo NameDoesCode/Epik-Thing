@@ -106,5 +106,5 @@ if(message.mentions.members.first().highestRole.position >= message.guild.me.hig
 			if(wt) {
 				ctx.run("./Modules/"+cmds.raw[cmd].path,{"message":message,"textArgs":textArgs, "arg": arg,"firstRan":firstRan})
 		 message.delete()
-		 }else if(atembd == new Discord.RichEmbed()) message.channel.send(atembd)
+		 }else if(atembd == new Discord.RichEmbed().setTitle("Issues.")) message.channel.send(atembd)
 			}
