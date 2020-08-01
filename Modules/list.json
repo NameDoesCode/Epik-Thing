@@ -9,6 +9,6 @@
   "user":{"toggled":true,"path":"Tools/user.js","cd":10000},
   "fuck":{"toggled":true,"path":"Responses/fuck.js","cd":17500,"antiTrigger":["nsfw","nps","npb","ping"],"uhp":["ADD_REACTIONS","SEND_MESSAGES"]}, 
   "finger":{"toggled":true,"path":"Responses/finger.js","cd":17500,"antiTrigger":["nsfw","nps","npb","ping"],"uhp":["ADD_REACTIONS","SEND_MESSAGES"]},
-  "kick":{"toggled":true,"path":"Moderation/kick.js","uhp":["KICK_MEMBERS"],"antiTrigger":["ping","isAbove"]}
+  "kick":{"toggled":true,"path":"Moderation/kick.js","uhp":["KICK_MEMBERS"],"antiTrigger":["ping","isAbove","nps"]}
 }, "aliases": []
 }
