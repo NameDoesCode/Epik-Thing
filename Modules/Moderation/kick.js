@@ -1,6 +1,7 @@
     var embd = new Discord.RichEmbed()
 	embd.setTitle("Kicked a user.")
-	embd.addField("Moderator",message.author.tag)
+	embd.addField("Executer",message.author.tag)
+    embd.addField("Target",message.mentions.users.first().tag)
 	embd.addField("Reason",message.content.replace(arg[0] + " ","").replace(message.mentions.users.first(),""))
 	message.channel.send(embd)
    message.mentions.members.first().kick(message.content.replace(arg[0] + " ","").replace(message.mentions.users.first(),""))
