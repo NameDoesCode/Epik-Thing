@@ -4,7 +4,7 @@ message.mentions.members.first().setNickname(cont)
     embd.setTitle("Nickname Changed.")
     embd.addField("Executer",message.author.tag)
     embd.addField("Target",message.mentions.users.first().tag)
-    if(cont == " ") cont = message.mentions.users.first().username
+    if(cont == "") cont = message.mentions.users.first().username
     embd.addField("New",cont)
     if(message.mentions.users.first().username != before) embd.addField("Before",before)
 	message.channel.send(embd)
