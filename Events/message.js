@@ -66,6 +66,12 @@ if(message.mentions.members.first().highestRole.position >= message.guild.me.hig
 	atembd.addField("Bot under target.","The bot must be above the target.")
 	}}
 					break
+                    case "owner":
+					if(!"./Arrays/owners".json().hasOwnProperty(message.author.id)) {
+					wt = false
+					atembd.addField("You don't have owner access.","Only the owners of this bot can use the command.")
+					}
+                    break
 					case "ping":
 					if(message.mentions.users.first() == undefined) {
 					atembd.addField("No ping defined.","This is to avoid any issues with the user not mentioning anyone.")
