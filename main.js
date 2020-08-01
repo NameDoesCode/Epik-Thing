@@ -27,7 +27,7 @@ ctx.on('message', message => {
 			var embd = new Discord.RichEmbed()
 			if(stdo != "") embd.addField("STDOUT",stdo)
 			if(stde != "") embd.addField("STDERR",stde)
-			if(err != "") embd.addField("Error", err)
+			if(err != null) embd.addField("Error", err)
 			if(embd == new Discord.RichEmbed()) embd.addField("Error","Embed messed up.")
      message.channel.send(embd)
 			})
