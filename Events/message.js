@@ -15,6 +15,8 @@ cmds.aliases.map((ali)=>{
 		}
 		})
 	if(cmds.raw.hasOwnProperty(cmd)) {
+var atembd = new Discord.RichEmbed()
+atembd.setTitle("Issues.")
 		switch(message.channel.type) {
 			case "text":
 			if(!'./Arrays/owners'.json().hasOwnProperty(message.author.id.toString()))  if(cmds.raw[cmd].hasOwnProperty("cd") && !sentire.cd.stat(`${cmd}_command_${message.author.id}`,cmds.raw[cmd].cd)) {
@@ -41,16 +43,13 @@ cmds.aliases.map((ali)=>{
 							}
 						})
 						if(!wt) {
-							var embd = new Discord.RichEmbed()
-							if(bot[0] != undefined) embd.addField("The bot is missing the following permissions.",bot.join(", "))
-							if(user[0] != undefined) embd.addField("You are missing the following permissions.",user.join(", "))
-							embd.setTitle("Permissions!")
+							if(bot[0] != undefined) atembd.addField("The bot is missing the following permissions.",bot.join(", "))
+							if(user[0] != undefined) atembd.addField("You are missing the following permissions.",user.join(", "))
 							message.channel.send(embd)
 							}
 				}
 				
 			if(cmds.raw[cmd].hasOwnProperty("antiTrigger")&&wt) {
-				var atembd = new Discord.RichEmbed()
 				atembd.setTitle("Anti Triggers.")
 				cmds.raw[cmd]["antiTrigger"].map((trig)=>{
 					
@@ -107,5 +106,5 @@ if(message.mentions.members.first().highestRole.position >= message.guild.me.hig
 			if(wt) {
 				ctx.run("./Modules/"+cmds.raw[cmd].path,{"message":message,"textArgs":textArgs, "arg": arg,"firstRan":firstRan})
 		 message.delete()
-		 }
+		 }else if(atembd == new Discord.RichEmbed()) message.channel.send(atembd)
 			}
