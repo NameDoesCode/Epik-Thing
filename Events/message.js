@@ -1,7 +1,6 @@
 String.prototype.json = function() {
 				 return JSON.parse(fs.readFileSync(this.toString() + '.json').toString())
 				}
-const wget = require("wget")
 var arg = message.content.split(' '), cmd = arg[0], prefixes = './configuration'.json().prefixes, textArgs = message.content.replace(arg[0] + ' ',''), cmds="./Modules/list".json(), wt=false,pings={}
 cmds.aliases.map((ali)=>{
 	ali.fakes.map((af)=>{
@@ -23,7 +22,6 @@ atembd.setTitle("Issues.")
 				wt = false
 				message.react("❌")
 				}else if(cmds.raw[cmd].hasOwnProperty("cd")) sentire.cd.add(`${cmd}_command_${message.author.id}`,cmds.raw[cmd].cd)
-				//User Has Permission
 			if(cmds.raw[cmd].hasOwnProperty("uhp")&&wt) {
 				var perms = message.member.permissions.toArray(), p2 = {}, p3 = {}, bot = [], user =[]
 				perms.map((perm)=>{
@@ -45,14 +43,11 @@ atembd.setTitle("Issues.")
 						if(!wt) {
 							if(bot[0] != undefined) atembd.addField("The bot is missing the following permissions.",bot.join(", "))
 							if(user[0] != undefined) atembd.addField("You are missing the following permissions.",user.join(", "))
-							message.channel.send(embd)
 							}
 				}
 				
 			if(cmds.raw[cmd].hasOwnProperty("antiTrigger")&&wt) {
-				atembd.setTitle("Anti Triggers.")
 				cmds.raw[cmd]["antiTrigger"].map((trig)=>{
-					
 					switch(trig.toLowerCase()) {
 					case "isAbove":
 					if(message.mentions.users.first() != undefined) {
