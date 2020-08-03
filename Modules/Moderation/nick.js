@@ -1,12 +1,10 @@
-var i = true
-if(message.mentions.members.first().highestRole.position <= message.member.highestRole.positon || message.mentions.members.first().user.id == message.guild.owner.id) {
-	message.chanel.send("They're your superior silly.")
-	i = false
-	}
-if(i && message.mentions.members.first().highestRole.position <= message.guild.me.highestRole.position) {
-	message.chanel.send(`*Try giving Sentire a role that's above **${message.mentions.members.first().highestRole.name}** and try again.*`)
-	i = false
-	}
-if(i) message.mentions.members.first().setNickname(message.content.replace(arg[0] + " ","").replace(message.mentions.users.first(),"")).then((user)=>{
-	message.channel.send(`*Set **${message.mentions.users.first().tag}** nickname to **${message.content.replace(arg[0]+" ","").replace(message.mentions.users.first(),"")}** I hope they enjoy your choice.*`)
-	})
+var cont = message.content.replace(arg[0] + " ","").replace(message.mentions.users.first(),""), before = message.mentions.members.first().displayName
+message.mentions.members.first().setNickname(cont)
+var embd = new Discord.RichEmbed()
+embd.setTitle("Nickname Changed.")
+embd.addField("Executer",message.author.tag)
+embd.addField("Target",message.mentions.users.first().tag)
+if(cont == "") cont = message.mentions.users.first().username
+embd.addField("New",cont)
+if(message.mentions.users.first().username != before) embd.addField("Before",before)
+	message.channel.send(embd)
