@@ -18,7 +18,6 @@
 "puss",
 "slut",
 "rape",
-"force",
 "trap",
 "libtards",
 "blow up",
