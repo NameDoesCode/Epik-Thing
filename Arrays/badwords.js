@@ -29,7 +29,6 @@
 "cut your",
 "slit your",
 "loli",
-"raid this",
 "mongrel",
 "molest",
 "raid th",
