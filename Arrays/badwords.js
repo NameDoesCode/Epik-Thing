@@ -1,5 +1,4 @@
-["nigger",
-"nigga",
+["nigg"
 "negro",
 "cp",
 "porn",
@@ -33,7 +32,7 @@
 "raid this",
 "mongrel",
 "molest",
-"raid the",
+"raid th",
 "genocide",
 "sex",
 "fuck",
