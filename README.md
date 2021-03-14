@@ -1,2 +1,2 @@
 # Sentire
-* Heavily W.I.P
+* Discontinued, open source bots are a bad idea.
